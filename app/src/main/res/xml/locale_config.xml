@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locale-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- English -->
+    <locale android:name="en-SG"/>
+    <!-- Bahasa Melayu -->
+    <locale android:name="ms"/>
+    <!-- Chinese (SG) in Simplified Script -->
+    <locale android:name="zh-SG"/>
+    <!-- Chinese (Taiwan) in Traditional Script -->
+    <locale android:name="zh-Hant-TW"/>
+</locale-config>

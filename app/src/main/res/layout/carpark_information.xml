@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:id="@+id/carParkInfo"
+                tools:context=".CarparkInformationFragment">
+
+    <ImageView
+            android:id="@+id/mapImageView"
+            android:layout_width="fill_parent"
+            android:layout_height="290dp"
+            android:layout_marginTop="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/invalid_image"
+    />
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scroll"
+            >
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="120dp"
+                        android:background="@drawable/white_gradient_bg"
+                        >
+
+
+            <TextView
+                    android:id="@+id/txtExtraSpace"
+                    android:layout_width="320dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_below="@+id/btnNavigate"/>
+
+            <TextView
+                    android:id="@+id/txtppName"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="150dp"
+
+                    android:text="CARPARK NAME"
+                    android:shadowColor="#999999"
+                    android:shadowDx="5"
+                    android:shadowDy="4"
+                    android:shadowRadius="4"
+                    android:textColor="#C225B8"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtppName"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+
+                    android:text=" "
+                    android:textSize="20sp"
+                    android:textColor="#666666"
+                    android:textStyle="bold|italic" />
+
+
+            <TextView
+                    android:id="@+id/txtLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtAddress"
+                    android:layout_marginTop="-10dp"
+                    android:layout_centerHorizontal="true"
+
+                    android:text="__________________________________"
+                    android:textColor="#DDDDDD"
+                    android:textSize="25sp" />
+
+            <TextView
+                    android:id="@+id/txtnumLotsAvailable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtLine"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginStart="90dp"
+
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#ed5fe4"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtstrLotsAvailable"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtLine"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@id/txtnumLotsAvailable"
+
+                    android:text=" lots available"
+                    android:textColor="#ed5fe4"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtSpaciousField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtnumLotsAvailable"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+
+                    android:text="Spaciousness"
+                    android:textSize="30sp"
+                    android:textColor="#C225B8"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtnumLotsAvailable"
+                    android:layout_toLeftOf="@id/txtRatingMax"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginTop="25dp"
+
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textColor="#666666"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtRatingMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtnumLotsAvailable"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="30dp"
+
+                    android:text="/5"
+                    android:textSize="25sp"
+                    android:textColor="#999999"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtFields"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSpaciousField"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:lineHeight="23dp"
+
+                    android:text="Vehicle type \nWeekday rate \nSaturday rate \nSunday/PH rate \nEnd time \nStart time \nParking capacity \nParking system"
+                    android:textSize="18sp"
+                    android:textColor="#999999"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtVehType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtRatingMax"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+
+                    android:text="type"
+                    android:textColor="#666666"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtWkdayRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtVehType"
+                    android:layout_marginTop="-1dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+
+                    android:text="unavail"
+                    android:textColor="#666666"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtSatRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtWkdayRate"
+                    android:layout_marginTop="-1dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+
+                    android:text="unavail"
+                    android:textColor="#666666"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtSunPHRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSatRate"
+                    android:layout_marginTop="-1dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+
+                    android:text="unavail"
+                    android:textColor="#666666"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtEndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSunPHRate"
+                    android:layout_marginTop="-1dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+
+                    android:text="unavail"
+                    android:textColor="#666666"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtEndTime"
+                    android:layout_marginTop="-1dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+
+                    android:text="unavail"
+                    android:textColor="#666666"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtParkCap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtStartTime"
+                    android:layout_marginTop="-1dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+
+                    android:text="num"
+                    android:textColor="#666666"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/txtParkSys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtParkCap"
+                    android:layout_marginTop="-1dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+
+                    android:text="system"
+                    android:textColor="#666666"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <Button
+                    android:id="@+id/btnNavigate"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/txtParkSys"
+                    android:layout_marginTop="30dp"
+                    android:shadowColor="#999999"
+                    android:shadowDx="5"
+                    android:shadowDy="4"
+                    android:shadowRadius="4"
+
+                    android:text="Navigate"
+                    android:backgroundTint="@color/quantum_purple"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="-20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="0dp">
+
+        <Button
+                android:id="@+id/btnMenu"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:drawableLeft="@drawable/baseline_menu_24"
+                android:textColor="#666666"
+                />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="-13dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/cardview_light_background"
+            android:lineHeight="25dp"
+
+            android:text="back"
+            android:textColor="#999999"
+            android:textSize="18sp" />
+
+
+    <RelativeLayout
+            android:id="@+id/ratingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+</RelativeLayout>

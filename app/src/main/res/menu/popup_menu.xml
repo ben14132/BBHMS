@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/menu_item_1"
+            android:title="Save Carpark" />
+    <item
+            android:id="@+id/menu_item_2"
+            android:title="Rate Spaciousness" />
+    <item
+            android:id="@+id/menu_item_3"
+            android:title="Parking Occupancy Trend" />
+    <!-- Add more menu items as needed -->
+</menu>

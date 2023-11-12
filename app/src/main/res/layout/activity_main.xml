@@ -1,43 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".MainActivity"
+                                                   android:id="@+id/parent_layout">
 
     <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="750dp"
-        android:padding="10dp"
-        android:paddingRight="10dp"
-        android:text="Find Carparks"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="650dp"
-        android:padding="10dp"
-        android:paddingRight="10dp"
-        android:text="Centre"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="620dp"
+            android:padding="10dp"
+            android:paddingRight="10dp"
+            android:text="Centre"
+            android:textAllCaps="false"
+
+            android:textColor="@android:color/white"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cornerRadius="8dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/gradient_bg"
+    />
+
+<!--android:backgroundTint="?android:attr/colorPrimary"-->
+
+
+
+    <!--
+    <Spinner
+            android:id="@+id/languageSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:entries="@array/languages"
+            android:entryValues="@array/language_codes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+    -->
+
+
+
+    <!-- autocomplete search fragment-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/idCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" tools:ignore="MissingConstraints"
+    >
+        <androidx.cardview.widget.CardView
+                android:id="@+id/idCardViewww"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="4dp" tools:ignore="MissingConstraints"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="15dp"
+        >
+            <fragment android:id="@+id/autocomplete_fragment"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                      android:hint="Search"
+            />
+
+            <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:src="@android:color/white"
+                    android:clickable="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="350dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+        <!--        <TextView-->
+        <!--                android:id="@+id/txtView"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                app:layout_constraintStart_toStartOf="@id/idCardViewww"-->
+        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--                app:layout_constraintRight_toRightOf="parent"-->
+        <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+        <Button
+                android:id="@+id/filterButton"
+                android:drawableLeft="@drawable/filter_car"
+                android:text="Vehicle Type"
+                android:textSize="12dp"
+                android:layout_width="170dp"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@id/idCardViewww"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/gradient_bg"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/idBottomView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" tools:ignore="MissingConstraints"
+    >
+        <FrameLayout
+                android:id="@+id/flFragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/idNavView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" tools:ignore="MissingConstraints"
+    >
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:menu="@menu/bottom_nav_menu"
+                app:itemIconSize="40dp"
+                app:itemRippleColor="@color/quantum_purple"
+                app:itemBackground="@color/light_purple"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+            android:id="@+id/ffframe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_below="@id/idCardView">
+        <!--            app:layout_constraintHorizontal_bias="0.5"-->
+        <!--            android:layout_gravity="center">-->
+
+    </FrameLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,20 @@
 <resources>
-    <string name="app_name">My Google Maps</string>
-    <string name="my_map_api_key">AIzaSyC41BGA0GeVQ05Ypvt_06g1cjESlrD31jQ</string>
+    <string name="app_name">Park U</string>
+    <string name="my_map_api_key">AIzaSyBweWI5dH3uu2YJCQoJHGl9HGjwDwwRgcc</string>
+    <string name="databaseKey">sc2006parku</string>
+    <!-- res/values/strings.xml -->
+    <string-array name="languages">
+        <item>English</item>
+        <item>Français</item>
+        <!-- Add more languages as needed -->
+    </string-array>
+
+    <string-array name="language_codes">
+        <item>en</item>
+        <item>fr</item>
+        <!-- Add more language codes corresponding to the languages above -->
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
